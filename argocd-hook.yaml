@@ -1,0 +1,19 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  generateName: deployment-trace-
+  annotations:
+    argocd.argoproj.io/hook: PostSync
+spec:
+  template:
+    spec:
+      serviceAccountName: collector-sa
+      containers:
+      - name: collector
+        image: narendra115c/collector:1.0
+        env:
+        - name: APP_NAME
+          value: nodejs-app
+        - name: NAMESPACE
+          value: nodejs
+      restartPolicy: Never
