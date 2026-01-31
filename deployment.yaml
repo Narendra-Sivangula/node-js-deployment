@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
       - name: nodejs
-        image: narendra115c/node-js:node-js-master-66-d90e39c
+        image: narendra115c/node-js:node-js-master-67-3606e8f
         ports:
         - containerPort: 3000
