@@ -12,7 +12,7 @@ spec:
       serviceAccountName: collector-sa
       containers:
       - name: collector
-        image: narendra115c/collector:1.5
+        image: narendra115c/collector:1.6
         env:
         - name: APP_NAME
           value: nodejs-app
