@@ -6,6 +6,7 @@ metadata:
   annotations:
     argocd.argoproj.io/hook: PostSync
     argocd.argoproj.io/hook-delete-policy: HookSucceeded
+    argocd.argoproj.io/ignore-health-check: "true"
 spec:
   template:
     spec:
