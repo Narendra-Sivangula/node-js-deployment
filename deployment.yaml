@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: nodejs
-        image: narendra115c/node-js:node-js-master-83-56bf6ad
+        image: narendra115c/node-js:node-js-master-84-1f1b95c
         env:
           - name: CRASH_ON_START
             value: "true"
