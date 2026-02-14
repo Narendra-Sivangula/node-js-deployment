@@ -5,14 +5,14 @@ metadata:
   namespace: nodejs
   annotations:
     argocd.argoproj.io/hook: PostSync
-    argocd.argoproj.io/hook-delete-policy: BeforeHookCreation
+    argocd.argoproj.io/hook-delete-policy: HookSucceeded
 spec:
   template:
     spec:
       serviceAccountName: collector-sa
       containers:
       - name: collector
-        image: narendra115c/collector:1.6
+        image: narendra115c/collector:1.7
         env:
         - name: APP_NAME
           value: nodejs-app
