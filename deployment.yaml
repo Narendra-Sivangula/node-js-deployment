@@ -16,5 +16,8 @@ spec:
       containers:
       - name: nodejs
         image: narendra115c/node-js:node-js-master-81-46e9de5
+        env:
+          - name: CRASH_ON_START
+            value: "true"
         ports:
         - containerPort: 3000
